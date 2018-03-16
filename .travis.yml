@@ -1,0 +1,15 @@
+services:
+  - docker
+before_script:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+script:
+  - docker build -t aws-xray .
+before_deploy:
+  - docker images
+  - docker tag aws-xray ibotta/aws-xray
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: docker push ibotta/aws-xray
+    on:
+      branch: master
