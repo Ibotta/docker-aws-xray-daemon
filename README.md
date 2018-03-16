@@ -1,5 +1,7 @@
 # AWS X-Ray Daemon
 
+[![Build Status](https://travis-ci.org/Ibotta/docker-aws-xray-daemon.svg?branch=master)](https://travis-ci.org/Ibotta/docker-aws-xray-daemon "Travis CI Status") [![](https://images.microbadger.com/badges/version/ibotta/aws-xray.svg)](https://microbadger.com/images/ibotta/aws-xray "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/ibotta/aws-xray.svg)](https://microbadger.com/images/ibotta/aws-xray "Get your own image badge on microbadger.com")
+
 This is a docker image which runs [AWS X-Ray daemon](https://docs.aws.amazon.com/xray/latest/devguide/xray-daemon.html) (2.x latest) on its own.
 
 ## Requirement

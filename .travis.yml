@@ -8,7 +8,7 @@ env:
 before_script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 script:
-  - docker build -t aws-xray .
+  - docker build -t aws-xray --build-arg VCS_REF="$TRAVIS_COMMIT" --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` .
 before_deploy:
   - docker images
   - docker tag aws-xray ibotta/aws-xray
