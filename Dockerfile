@@ -1,4 +1,4 @@
-FROM alpine as download
+FROM alpine
 
 ARG VCS_REF
 
@@ -12,9 +12,6 @@ RUN cd /tmp/ && apk add --update libc6-compat unzip ca-certificates && \
 		rm /tmp/* && \
 		rm -rf /var/cache/apk/*
 
-ENV AWS_ACCESS_KEY_ID=
-ENV AWS_SECRET_ACCESS_KEY=
-ENV AWS_REGION=
 
 EXPOSE 2000/udp
 

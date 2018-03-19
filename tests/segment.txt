@@ -1,0 +1,2 @@
+{"format": "json", "version": 1}
+{"trace_id": "1-5759e988-bd862e3fe1be46a994272793", "id": "defdfd9912dc5a56", "start_time": 1461096053.37518, "end_time": 1461096053.4042, "name": "test.elasticbeanstalk.com"}
