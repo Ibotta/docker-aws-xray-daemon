@@ -1,9 +1,14 @@
-app:
-  build: .
-  ports:
-    - "2000:2000/udp"
-  command: --local-mode --region us-east-1
-  environment:
-    AWS_ACCESS_KEY_ID:
-    AWS_SECRET_ACCESS_KEY:
-    AWS_REGION:
+version: '3'
+services:
+  xray-local:
+    build: .
+    ports:
+      - "2000:2000/udp"
+    command: --local-mode --region us-east-1
+    environment:
+      AWS_ACCESS_KEY_ID:
+      AWS_SECRET_ACCESS_KEY:
+      AWS_REGION:
+      AWS_DEFAULT_REGION:
+      AWS_SESSION_TOKEN:
+      AWS_SECURITY_TOKEN:
