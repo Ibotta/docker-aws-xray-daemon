@@ -18,3 +18,5 @@ deploy:
     script: docker push ibotta/aws-xray
     on:
       branch: master
+      
+      
